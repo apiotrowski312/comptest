@@ -15,7 +15,7 @@ The package aims to make component testing easier by providing a set of helper f
 Get package
 
 ```bash
-go get github.com/ingridhq/comptest
+go get github.com/apiotrowski312/comptest
 ```
 
 And start using it:

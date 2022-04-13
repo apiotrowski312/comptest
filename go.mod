@@ -1,4 +1,4 @@
-module github.com/ingridhq/comptest
+module github.com/apiotrowski312/comptest
 
 go 1.16
 

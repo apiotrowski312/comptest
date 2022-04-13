@@ -11,11 +11,11 @@ import (
 	"time"
 
 	"cloud.google.com/go/pubsub"
+	"github.com/apiotrowski312/comptest"
+	cppostgres "github.com/apiotrowski312/comptest/db/postgres"
+	ctpubsub "github.com/apiotrowski312/comptest/pubsub"
+	"github.com/apiotrowski312/comptest/waitfor"
 	_ "github.com/golang-migrate/migrate/v4/source/file"
-	"github.com/ingridhq/comptest"
-	cppostgres "github.com/ingridhq/comptest/db/postgres"
-	ctpubsub "github.com/ingridhq/comptest/pubsub"
-	"github.com/ingridhq/comptest/waitfor"
 	"github.com/kelseyhightower/envconfig"
 )
 

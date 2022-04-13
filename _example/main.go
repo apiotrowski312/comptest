@@ -13,7 +13,7 @@ import (
 	"github.com/kelseyhightower/envconfig"
 	_ "github.com/lib/pq"
 
-	ctpubsub "github.com/ingridhq/comptest/pubsub"
+	ctpubsub "github.com/apiotrowski312/comptest/pubsub"
 )
 
 var count int64

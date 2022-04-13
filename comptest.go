@@ -6,8 +6,8 @@ import (
 	"log"
 	"os"
 
+	"github.com/apiotrowski312/comptest/binary"
 	"github.com/cenkalti/backoff/v4"
-	"github.com/ingridhq/comptest/binary"
 	"golang.org/x/sync/errgroup"
 )
 

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/apiotrowski312/comptest/db/dbutil"
 	_ "github.com/golang-migrate/migrate/v4/database/mysql"
-	"github.com/ingridhq/comptest/db/dbutil"
 	"github.com/jmoiron/sqlx"
 )
 

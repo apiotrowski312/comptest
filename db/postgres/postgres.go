@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/apiotrowski312/comptest/db/dbutil"
 	_ "github.com/golang-migrate/migrate/v4/database/postgres"
-	"github.com/ingridhq/comptest/db/dbutil"
 	"github.com/jmoiron/sqlx"
 )
 
