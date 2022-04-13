@@ -31,8 +31,7 @@ func MustStartGRPCServer(addr string, regFn func(s *grpc.Server)) {
 }
 
 // CreateGRPCConn will create grpc conn with disabled TLS.
-func CreateGRPCConn(addr string) (*grpc.ClientConn, error) {
-	connOpts := getOptionsFromAddress(addr)
+func CreateGRPCConn(addr string, connOpts ...grpc.DialOption) (*grpc.ClientConn, error) {
 	addr = cleanAddress(addr)
 
 	conn, err := grpc.Dial(addr, connOpts...)
@@ -53,16 +52,6 @@ func MustCreateGRPCConn(addr string) *grpc.ClientConn {
 // cleanAddress will return address without options
 func cleanAddress(addr string) string {
 	return strings.Split(addr, "?")[0]
-}
-
-func getOptionsFromAddress(addr string) []grpc.DialOption {
-	connOpts := []grpc.DialOption{}
-
-	if strings.Contains(addr, "insecure=true") {
-		connOpts = append(connOpts, grpc.WithInsecure())
-	}
-
-	return connOpts
 }
 
 func PubsubMessageToProtoMessage(m *pubsub.Message) (ptypes.DynamicAny, error) {
